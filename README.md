@@ -1,7 +1,5 @@
 # 🚀 Profile Card Generator
 
-## 📸 Project Preview
-
 ### 🏠 Home Page UI
 
 ![Home Page](image.png)
