@@ -1,0 +1,393 @@
+@font-face {
+  font-family: demo;
+  src: url(Berico.otf);
+}
+
+@font-face {
+  font-family: trans;
+  src: url(Transcity\ DEMO.otf);
+}
+
+@font-face {
+  font-family: east;
+  src: url(Mileast.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+header {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+header h1 {
+  font-family: east;
+  font-weight: 100;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.links .explore-link {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.links .explore-link:hover {
+  border-bottom: 2px solid black;
+  padding-bottom: 2px;
+}
+
+.new-profile-btn {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  outline: none;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.new-profile-btn:hover {
+  background-color: transparent;
+  color: black;
+}
+
+main {
+  height: calc(100% - 10%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1;
+  gap: 20px;
+  overflow-x: hidden;
+}
+
+main h1 {
+  letter-spacing: 0.1px;
+  font-size: 60px;
+}
+
+main span {
+  color: rgb(119, 0, 255);
+}
+
+.hero-btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.explore-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: black;
+  outline: none;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 15px;
+  border: 2px solid black;
+}
+
+.explore-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.user-profiles {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.user-card {
+  height: 350px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #bdc3c7;
+  background: linear-gradient(to top, #2c3e50, #bdc3c7);
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.user-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 3px;
+  position: absolute;
+  padding: 15px;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.5),
+    transparent
+  );
+}
+
+.info h3,
+.info h4 {
+  color: white;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* FormPart */
+section {
+  height: 15%;
+  width: 100%;
+  padding: 0px;
+}
+
+form {
+  margin: 0px;
+  background-color: white;
+  padding: 20px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  border-bottom: 2px solid black;
+}
+
+form button {
+  padding: 12px 20px;
+  background-color: black;
+  color: white;
+  outline: none;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: -2px;
+}
+
+form button:hover {
+  background-color: transparent;
+  color: black;
+}
+
+form input::placeholder {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.fields {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.fields input {
+  padding: 15px 20px;
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  background-color: #ffffff;
+  border: 2px solid black;
+}
+
+.fields label {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 500;
+  top: -10px;
+  left: 25px;
+  padding: 0px 5px;
+  background-color: white;
+}
+
+.card-layout {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0px 10px;
+  background-color: black;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px 10px;
+}
+
+.card-container {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-card {
+  height: 350px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #bdc3c7;
+  background: linear-gradient(to top, #2c3e50, #bdc3c7);
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.about {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 3px;
+  position: absolute;
+  padding: 15px;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.5),
+    transparent
+  );
+}
+
+.about h3,
+.about h4 {
+  color: white;
+  font-weight: 400;
+  margin: 0;
+}
+
+.action-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.action-buttons button {
+  padding: 10px 15px;
+}
+
+.action-buttons button:first-child {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid black;
+}
+
+.action-buttons button:first-child:hover {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.action-buttons button:nth-child(2) {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 2px solid black;
+  background-color: red;
+  color: white;
+  border: 2px solid white;
+}
+
+.action-buttons button:nth-child(2):hover {
+  background-color: rgb(255, 99, 99);
+  border: 1px solid black;
+}
+
+.ri-pencil-fill,
+.ri-delete-bin-fill {
+  font-size: 20px;
+}
