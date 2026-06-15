@@ -33,7 +33,7 @@ This project was developed as part of my **Full Stack / MERN Stack Development l
 
 * **HTML5**
 * **CSS3**
-* **JavaScript (Vanilla JS)**
+* **JavaScript**
 
 ---
 
